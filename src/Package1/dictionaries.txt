@@ -1,0 +1,4 @@
+catcat	ie
+dog	ga
+bird	chip
+pig	ub
