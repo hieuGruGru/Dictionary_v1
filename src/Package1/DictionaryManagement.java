@@ -28,6 +28,7 @@ public class DictionaryManagement {
         newWord.setWord_target(string);
         System.out.println("Hãy nhập nghĩa của từ " + string + " :");
         newWord.setWord_explain(sc.nextLine());
+        dictionary1.arrayOfWord.add(newWord);
     }
 
     public static void insertFromFile(Dictionary dictionary1) throws IOException { //Load các cặp từ từ file .txt vào mảng các Word
@@ -54,7 +55,7 @@ public class DictionaryManagement {
      */
     public static void dictionaryLookup(Dictionary dictionary1) { //Tra nghĩa của 1 từ tiếng anh trong từ điển
         Scanner sc = new Scanner(System.in);
-        System.out.println("Hãu nhập từ cần tra nghĩa : ");
+        System.out.println("Hãy nhập từ cần tra nghĩa : ");
         String stringLookup = sc.nextLine();//Lấy đúng stringLookup rồi
         Word wordLookup = new Word(stringLookup,"");//wordLookup nhận đúng giá trị
         int indexOfWordLookup = Search.linearSearch(dictionary1, wordLookup);
@@ -84,10 +85,19 @@ public class DictionaryManagement {
 
     }
 
-    public static void deleteWord(Dictionary dictionary1, String string) {
-        Word wordLookup = new Word(string,"");
+    public static void deleteWord(Dictionary dictionary1) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hãy nhập từ cần xóa : ");
+        String deleteString = sc.nextLine();
+        Word wordLookup = new Word(deleteString,"");
         int indexOfWordDelete = Search.linearSearch(dictionary1, wordLookup);
-        dictionary1.arrayOfWord.remove(indexOfWordDelete);
+        Word word  = dictionary1.arrayOfWord.get(indexOfWordDelete);
+        if ( indexOfWordDelete > -1 ) {
+            System.out.println("Từ " + word.getWord_target() + " sẽ bị xóa.");
+            dictionary1.arrayOfWord.remove(indexOfWordDelete);
+        } else {
+            System.out.println("Từ này đã có trong từ điển đâu mà đòi xóa ?? 😃 ??");
+        }
     }
 
 }

@@ -2,3 +2,5 @@ catcat	ie
 dog	ga
 bird	chip
 pig	ub
+cat	hieu
+call	yeu
