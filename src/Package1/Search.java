@@ -20,7 +20,8 @@ public class Search { //Các phương thức tìm kiếm
         int flag = -1;
         for (int index = 0; index < dictionary1.arrayOfWord.size(); index++) {
             //System.out.println(arrayOfWord.get(index).getWord_target() + "\t" );
-            if (dictionary1.arrayOfWord.get(index).getWord_target().equalsIgnoreCase(word.getWord_target()) == true ) { //Kiểm tra từ vừa nhập vào có trùng với các từ có sẵn trong từ điển hay không
+            if (dictionary1.arrayOfWord.get(index).getWord_target().equalsIgnoreCase(word.getWord_target()) == true ) { //Kiểm tra từ vừa nhập vào có trùng với
+                                                                                                                        //các từ có sẵn trong từ điển hay không
                 flag = index;
             }
         }
