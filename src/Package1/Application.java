@@ -9,6 +9,8 @@ public class Application {
         DictionaryCommandline.showAllWords(dictionary1);
         //DictionaryManagement.dictionaryLookup(dictionary1);
         //DictionaryCommandline.showAllWords(dictionary1);
-        DictionaryCommandline.dictionarySearcher(dictionary1);
+        //DictionaryCommandline.dictionarySearcher(dictionary1);
+      
     }
+
 }

@@ -39,11 +39,11 @@ public class DictionaryManagement {
             String currentLine = sc.nextLine();
             int indexOfTab = currentLine.indexOf("\t");
             //System.out.println("Vi tri dau tab la : " + indexOfTab);
-            String word = currentLine.substring(0, indexOfTab);
-            //System.out.println("Tu dau tien la : " + word);
-            String meanings = currentLine.substring(indexOfTab + 1, currentLine.length());
-            //System.out.println("Tu thu hai la : " + meanings);
-            Word newWord = new Word(word, meanings);
+            String target = currentLine.substring(0, indexOfTab);
+            //System.out.println("Tu dau tien la : " + target);
+            String explain = currentLine.substring(indexOfTab + 1, currentLine.length());
+            //System.out.println("Tu thu hai la : " + explain);
+            Word newWord = new Word(target, explain);
             dictionary1.arrayOfWord.add(newWord);
         }
         sc.close();
